@@ -1,0 +1,306 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Comic Sans MS';
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.panel{
+    position: absolute;
+    height: 100%;
+    background-color: #2168FF;
+    width: 500px;
+    z-index: -1;
+}
+
+.contenedor, .contenido{
+    display: flex;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    max-width: 1800px;
+    max-height: 1600px;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: 0;
+    position: relative;
+}   
+
+input{
+    display: none;
+}
+
+nav ul{
+    margin-right: 100px;
+    position: absolute;
+    right: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: auto;
+    font-size: 1.3em;
+    margin: 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+nav ul li::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    top: 100%;
+    height: 3px;
+    background-color: #111;
+}
+
+li:hover::before{
+    animation: subrayado forwards .2s;
+}
+
+@keyframes subrayado{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+
+.contenido{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+}
+
+
+.imagen{
+    text-align: center;
+    font-size: 2em;
+    margin-left: 50px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.imagen .img{
+    width: 370px;
+    height: 370px;
+    display: flex;
+    background-color: silver;
+    border-radius: 50%;
+}
+
+.imagen img{
+    border-radius: 50%;
+    margin: auto;
+}
+
+.imagen .seguir{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-size: 14pt;
+}
+
+.seguidores span, .seguidos span{
+    color: rgba(255, 255, 255, .7); 
+}
+
+.descripcion{
+    padding: 0px 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcion h1{
+    font-size: 4em;
+    color: #2168FF;
+    height: 100px;
+}
+
+.descripcion h2{
+    font-size: 1.7em;
+    color: silver;
+    padding-bottom: 10px;
+    height: 50px;
+}
+
+.descripcion p{
+    text-align: justify;
+    font-size: 1.2em;
+    min-height: 125px;
+    height: auto;
+    overflow-y: auto;
+    max-height: 140px;
+    padding-right: 3px;
+}
+
+.descripcion .suscripcion{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.suscripcion a{
+    border: 2px solid #2168FF;
+    color: #2168FF;
+    padding: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.suscripcion a:hover{
+    background-color: #2168FF;
+    color: #fff;
+}
+
+.descripcion p::-webkit-scrollbar{
+    width: 8px;
+    
+}
+
+.descripcion p::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 10px/10px;
+}
+
+.descripcion p::-webkit-scrollbar-button{
+    height: 0px;
+}
+
+.descripcion p:hover::-webkit-scrollbar-thumb{
+    background-color: #2168FF;
+}
+
+
+@media (min-width:1000px){
+    .descripcion h1{
+        font-size: 2.5em;
+    }
+
+    .imagen{
+        margin-left: 60px;
+    }
+
+    nav ul li:nth-child(1){
+        color: #fff;
+    }
+
+    nav ul li:nth-child(1)::before{
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 768px){
+
+    .panel{
+        width: 100%;
+        height: 60%;
+    }
+
+    .contenido{
+        flex-direction: column;
+    }
+
+    nav{
+        position: absolute;
+        color: #fff;
+        display: flex;
+        font-size: 1.2em;
+    }
+
+    nav ul li:hover::before{
+        background-color: #fff;
+    }
+
+    .imagen{
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .imagen .img{
+        margin: auto;
+    }
+
+    .imagen .seguir{
+        justify-content: space-around;
+    }
+
+    .seguir{
+        width: 100%;
+    }
+
+    .descripcion{
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 460px){
+
+    .panel{
+        height: 100%;
+    }
+
+    .imagen{
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .imagen img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .imagen .img{
+        width: 320px;
+        height: 320px;
+    }
+
+    .descripcion{
+        padding: 15px;        
+        position: absolute;
+        top: 100%;
+    }
+
+    .descripcion h1{
+        font-size: 2em;
+        height: 60px;
+        text-align: center;
+    }
+
+    .descripcion p{
+        max-height: none;
+    }
+
+    .icon{display: none;}
+
+    nav ul{
+        margin: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
