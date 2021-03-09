@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
-    <a href="index.html" target="blank">abrir</a>
+    <a href="src/views/includes/dropzone.php" target="blank">abrir</a>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
