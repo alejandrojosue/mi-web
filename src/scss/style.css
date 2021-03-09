@@ -1,0 +1,8 @@
+@import "base/_base.scss";
+@import "blocks/_input_file.scss";
+@import "blocks/_form.scss";
+@import "blocks/_barra.scss";
+@import 'config/_fonts.scss';
+@import "blocks/_button.scss";
+@import 'config/_colors.scss';
+@import 'helpers/_nav.css';
